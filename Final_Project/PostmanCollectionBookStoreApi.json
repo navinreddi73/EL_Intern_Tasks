@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "3dd8a1c2-3e57-406f-a49c-7b5f9513d9d5",
+		"name": "BookStore-Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Author",
+			"item": [
+				{
+					"name": "addnewauthor",
+					"id": "967e8ccc-1d30-4810-a7fc-9c680ca778a4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"J.K. Rowling\",\n  \"email\": \"jk.rowling@example.com\",\n  \"biography\": \"British author, best known for the Harry Potter series.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/authors"
+					},
+					"response": []
+				},
+				{
+					"name": "getallauthors",
+					"id": "02d16f74-910d-4418-8f78-da6d9f5114e5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/authors"
+					},
+					"response": []
+				},
+				{
+					"name": "getbyauthorid",
+					"id": "8ad7ce53-d23a-4453-90b0-e58dd7b24229",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/authors/1"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"id": "45c10b8e-d860-4fa0-bf3c-9edaab7f70b1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Joanne Rowling\",\n  \"email\": \"joanne.rowling@updated.com\",\n  \"biography\": \"Updated biography information.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/authors/1"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteid",
+					"id": "ed9fe758-f7d2-4920-9276-b67304348272",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Joanne Rowling\",\n  \"email\": \"joanne.rowling@updated.com\",\n  \"biography\": \"Updated biography information.\"\n}"
+						},
+						"url": "http://localhost:8080/authors/2"
+					},
+					"response": []
+				}
+			],
+			"id": "0685ffb9-5ff9-4b99-86d6-bbad10e2df24"
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "InsertData",
+					"id": "cfaed8a3-3d65-4dfa-8b82-d3e5ab276310",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Harry Potter and the Sorcerer's Stone\",\n  \"isbn\": \"9780747532699\",\n  \"price\": 499.99,\n  \"publishedDate\": \"1997-06-26\",\n  \"author\": { \"id\": 1 }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/books"
+					},
+					"response": []
+				},
+				{
+					"name": "getallbooks",
+					"id": "815bb68d-0e8d-4e69-94c7-ff1a8a078141",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getbyid",
+					"id": "ea8af361-9935-4d6c-b3af-98328c5faf71",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/books/2"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "7e75d3ff-31ac-47b1-bf3c-6cbb4a7915f2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"id": "2335d295-ed88-45c9-98a0-b35302f6b4b1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "8488a82b-32bc-4034-be08-674c188e924b"
+		},
+		{
+			"name": "Pagination + Sorting",
+			"id": "8ff43277-4156-4e9d-9253-f8c056c4cf09",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books?page=0&size=5&sortBy=title",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						},
+						{
+							"key": "sortBy",
+							"value": "title"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
