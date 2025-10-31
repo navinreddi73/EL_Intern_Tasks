@@ -3,9 +3,12 @@ package com.bookstore.controller;
 import com.bookstore.model.Author;
 import com.bookstore.repository.AuthorRepo;
 import org.springframework.web.bind.annotation.*;
+
+import javax.lang.model.util.Elements;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3001")
 @RequestMapping("/authors")
 public class AuthorContr {
 
